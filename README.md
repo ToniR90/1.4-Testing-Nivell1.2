@@ -32,13 +32,13 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.ValueSource;
 
-public class CalculoDniTest {
+public class CalculateDniTest {
 
     @ParameterizedTest
     @ValueSource(ints = {12345678, 23456789, 34567890, 45678901, 56789012, 67890123, 78901234, 89012345, 90123456, 99999999})
-    public void testCalcularLetra(int numeroDni) {
-        CalculoDni calculoDni = new CalculoDni();
-        char letraEsperada = // calculate the expected letter for each DNI;
-        assertEquals(letraEsperada, calculoDni.calcularLetra(numeroDni));
+    public void testCalculateChar(int dniNumber) {
+        CalculateDni calculateDni = new CalculateDni();
+        char charExpected = // calculate the expected letter for each DNI;
+        assertEquals(charExpected, calculateDni.charExpected(dniNumber));
     }
-}Readme 
+} 
